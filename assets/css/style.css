@@ -1,0 +1,170 @@
+
+:root {
+    --background: #f9f6ef;
+    --text: #222222;
+    --accent: #a33d32;
+    --muted: #666666;
+    --border: #d6d0c5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+/* Navigation */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Homepage */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 100px);
+    line-height: 1.05;
+    margin: 25px 0;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 25px;
+    font-style: italic;
+    color: var(--muted);
+}
+
+.intro {
+    max-width: 650px;
+    font-size: 18px;
+    margin: 20px auto 35px;
+}
+
+.scroll-button {
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 12px 25px;
+    transition: 0.2s;
+}
+
+.scroll-button:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Story chapters */
+
+.chapter {
+    max-width: 950px;
+    margin: auto;
+    padding: 90px 30px;
+    border-top: 1px solid var(--border);
+}
+
+.chapter-number {
+    font-family: Arial, sans-serif;
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 15px 0 25px;
+}
+
+.chapter p {
+    font-size: 19px;
+}
+
+.chapter a {
+    color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    background: #222222;
+    color: #f9f6ef;
+    padding: 35px;
+    font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .chapter {
+        padding: 60px 20px;
+    }
+}

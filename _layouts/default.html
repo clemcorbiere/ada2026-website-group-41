@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ site.title }}</title>
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a class="logo" href="#">YMCa.</a>
+
+        <div class="nav-links">
+            <a href="#competition">Competition</a>
+            <a href="#words">Words</a>
+            <a href="#events">Events</a>
+            <a href="#surprise">Surprise</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>EPFL — Applied Data Analysis 2026</p>
+        <p>Team YMCa · Group 41</p>
+    </footer>
+
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+
+</body>
+</html>
